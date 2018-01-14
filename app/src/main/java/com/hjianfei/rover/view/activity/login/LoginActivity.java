@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.hjianfei.rover.MainActivity;
+import com.hjianfei.rover.view.activity.main.MainActivity;
 import com.hjianfei.rover.R;
 import com.hjianfei.rover.base.BaseActivity;
 import com.hjianfei.rover.base.BaseResponse;
