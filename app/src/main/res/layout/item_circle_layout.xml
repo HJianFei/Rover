@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:text="2018-02-04 15:12"
                 android:textColor="#6b6b6b"
-                android:textSize="18sp" />
+                android:textSize="22sp" />
 
         </LinearLayout>
 

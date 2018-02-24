@@ -74,10 +74,11 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.ll_circle, R.id.ll_add, R.id.ll_message})
     public void onViewClicked(View view) {
-        mLastItem = mCurrentItem;
-        setLastImageViewNormal(mLastItem);
+
         switch (view.getId()) {
             case R.id.ll_circle:
+                mLastItem = mCurrentItem;
+                setLastImageViewNormal(mLastItem);
                 mCurrentItem = 0;
                 showFragment(mCurrentItem);
                 break;
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.ll_message:
+                mLastItem = mCurrentItem;
+                setLastImageViewNormal(mLastItem);
                 mCurrentItem = 1;
                 showFragment(mCurrentItem);
                 break;
