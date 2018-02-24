@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/bg"
     tools:context="com.hjianfei.rover.view.fragment.circle.CircleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/main_toolbar" />
 
-    <TextView
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/rv_circle_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -16,4 +16,5 @@
 
     <color name="bottom_text_color_select">#1983d1</color>
     <color name="bottom_text_color_default">#aaaaaa</color>
+    <color name="dynamic_address_color">#ff7538</color>
 </resources>
