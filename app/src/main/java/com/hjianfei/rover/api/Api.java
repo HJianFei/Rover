@@ -3,6 +3,7 @@ package com.hjianfei.rover.api;
 
 import com.hjianfei.rover.base.BaseResponse;
 import com.hjianfei.rover.constants.Urls;
+import com.hjianfei.rover.entity.DynamicListResult;
 import com.hjianfei.rover.entity.LoginResult;
 import com.hjianfei.rover.entity.ResultCode;
 
@@ -26,6 +27,15 @@ public interface Api {
     //用户登录
     @POST(Urls.LOGIN_USER)
     Observable<BaseResponse<LoginResult>> loginser(@FieldMap Map<String, Object> map);
+
+    /**
+     * 获取动态列表
+     *
+     * @param map
+     * @return
+     */
+    @POST(Urls.GET_DYNAMIC_LIST)
+    Observable<DynamicListResult> getDynamicList(@FieldMap Map<String, Object> map);
 
 
 }

@@ -3,6 +3,9 @@ package com.hjianfei.rover.base;
 import android.app.Activity;
 import android.app.Application;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,6 +24,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        initImageLoader();
 
     }
 
@@ -61,5 +65,11 @@ public class App extends Application {
         }
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
+    }
+
+    private void initImageLoader() {
+        ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(this);
+        ImageLoader.getInstance().init(configuration);
+
     }
 }

@@ -49,5 +49,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.github.jdsjlzx:LRecyclerView:1.4.3'
     compile 'com.github.ceryle:RadioRealButton:v2.1.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
 }

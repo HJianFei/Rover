@@ -17,4 +17,7 @@ public class Urls {
     //用户登录
     public static final String LOGIN_USER = "";
 
+    //获取动态列表
+    public static final String GET_DYNAMIC_LIST = "";
+
 }
