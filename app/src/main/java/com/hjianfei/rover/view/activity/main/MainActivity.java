@@ -9,11 +9,13 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hjianfei.rover.R;
 import com.hjianfei.rover.utils.ActivityUtils;
 import com.hjianfei.rover.view.fragment.circle.CircleFragment;
 import com.hjianfei.rover.view.fragment.message.MessageFragment;
+import com.hjianfei.rover.wedgit.AddMenuDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_MESSAGE_FRAGMENT = "MessageFragment";
     private FragmentManager mFragmentManager;
 
+    private AddMenuDialog addMenuDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,12 +81,44 @@ public class MainActivity extends AppCompatActivity {
                 showFragment(mCurrentItem);
                 break;
             case R.id.ll_add:
+                showAddMenuDialog();
+
                 break;
             case R.id.ll_message:
                 mCurrentItem = 1;
                 showFragment(mCurrentItem);
                 break;
         }
+    }
+
+    private void showAddMenuDialog() {
+        if (addMenuDialog == null) {
+            addMenuDialog = new AddMenuDialog(MainActivity.this);
+            addMenuDialog.setPlaneClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "飞机", Toast.LENGTH_SHORT).show();
+                    addMenuDialog.outDia();
+                }
+            });
+
+
+            addMenuDialog.setTrainClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "列车", Toast.LENGTH_SHORT).show();
+                    addMenuDialog.outDia();
+                }
+            });
+            addMenuDialog.setCarClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "客车", Toast.LENGTH_SHORT).show();
+                    addMenuDialog.outDia();
+                }
+            });
+        }
+        addMenuDialog.show();
     }
 
     private void showFragment(int index) {
