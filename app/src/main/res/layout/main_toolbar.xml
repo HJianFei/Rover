@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/appbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -26,22 +27,37 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
             android:layout_weight="1"
-            android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                android:id="@+id/button_group_bt"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="热门"
-                android:textSize="24sp" />
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                app:rrbg_backgroundColor="@android:color/transparent"
+                app:rrbg_borderColor="@color/white"
+                app:rrbg_borderSize="0dp"
+                app:rrbg_checkedPosition="0"
+                app:rrbg_selectorColor="@color/white"
+                app:rrbg_selectorFullSize="false">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="52dp"
-                android:text="关注"
-                android:textSize="24sp" />
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="false"
+                    app:rrb_text="热门"
+                    app:rrb_textSize="22sp" />
+
+                <co.ceryle.radiorealbutton.RadioRealButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rrb_ripple="false"
+                    app:rrb_text="关注"
+                    app:rrb_textSize="22sp" />
+            </co.ceryle.radiorealbutton.RadioRealButtonGroup>
 
         </LinearLayout>
 
