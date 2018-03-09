@@ -64,4 +64,6 @@ public class CircleAdapter extends RecyclerView.Adapter<CircleAdapter.ViewHolder
         }
         return list.size();
     }
+
+
 }
