@@ -131,16 +131,16 @@ public class MainActivity extends AppCompatActivity {
         switch (index) {
             case 0:
                 tvCircle.setTextColor(getResources().getColor(R.color.bottom_text_color_select));
-                ivCircle.setImageResource(R.mipmap.head);
+                ivCircle.setImageResource(R.drawable.ticket_icon_press);
                 if (circleFragment != null && !circleFragment.isAdded()) {
                     ActivityUtils.addFragmentToActivityWithTag(mFragmentManager, circleFragment, R.id.main_container, TAG_CIRCLE_FRAGMENT);
                 }
-                hideAllFragment(transaction);
+                  hideAllFragment(transaction);
                 transaction.show(circleFragment);
                 break;
             case 1:
                 tvMessage.setTextColor(getResources().getColor(R.color.bottom_text_color_select));
-                ivMessage.setImageResource(R.mipmap.head);
+                ivMessage.setImageResource(R.drawable.message_icon_press);
                 if (messageFragment != null && !messageFragment.isAdded()) {
                     ActivityUtils.addFragmentToActivityWithTag(mFragmentManager, messageFragment, R.id.main_container, TAG_MESSAGE_FRAGMENT);
                 }
@@ -175,10 +175,10 @@ public class MainActivity extends AppCompatActivity {
     private void setLastImageViewNormal(int lastItem) {
         switch (lastItem) {
             case 0:
-                ivCircle.setImageResource(R.mipmap.ic_launcher);
+                ivCircle.setImageResource(R.drawable.ticket_icon_nomarl);
                 break;
             case 1:
-                ivMessage.setImageResource(R.mipmap.ic_launcher);
+                ivMessage.setImageResource(R.drawable.message_icon_nomarl);
                 break;
         }
     }

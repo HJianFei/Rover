@@ -35,7 +35,7 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/ticket_icon_nomarl" />
 
             <TextView
                 android:id="@+id/tv_circle"
@@ -61,7 +61,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/tab_add_icon_1" />
+                android:src="@drawable/publish_icon" />
 
 
         </LinearLayout>
@@ -79,7 +79,7 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/message_icon_nomarl" />
 
             <TextView
                 android:id="@+id/tv_message"
